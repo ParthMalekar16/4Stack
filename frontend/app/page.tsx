@@ -1,28 +1,27 @@
 "use client";
 
+import Hero from "../components/hero";
+
 export default function Home() {
-  return (
-    <main className="min-h-screen bg-gradient-to-br from-pink-100 via-blue-100 to-purple-200 flex items-center justify-center">
-      <div className="text-center space-y-6">
-        
-        <h1 className="text-5xl font-bold text-black">
-          4Stack TypeShi (Name to be changed later)
-        </h1>
+return (<main>
 
-        <p className="text-5xl font-bold text-black">
-          Building something awesome with my team
-        </p>
 
-        <button className="px-6 py-3 bg-white text-black rounded-full font-medium hover:bg-zinc-200 transition">
-          Get Started
-        </button>
-        <div className="flex gap-4 justify-center">
-  <button className="text-5xl font-bold text-black">
-    Learn More
-  </button>
-</div>
 
-      </div>
-    </main>
-  );
+
+  <section className="bg-gradient-to-br from-pink-100 via-blue-100 to-purple-200 py-20">
+    <div className="text-center space-y-6 px-4">
+      
+      <h2 className="text-3xl md:text-4xl font-bold text-black">
+        There's shit to insert here
+      </h2>
+
+      <p className="text-lg text-gray-700 max-w-xl mx-auto">
+        My team is not motivated, they don't have the drive in them
+      </p>
+
+    </div>
+  </section>
+</main>
+
+);
 }
