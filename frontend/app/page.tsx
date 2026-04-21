@@ -1,8 +1,6 @@
 "use client";
 
 import Hero from "../components/hero";
-import { useState } from "react";
-
 
 export default function Home() {
 return (<main>
