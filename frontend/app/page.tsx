@@ -19,6 +19,10 @@ return (<main>
         My team is not motivated, they don't have the drive in them
       </p>
 
+     <p className="text-3xl text-black font-bold text-center mt-4">
+       NIGGER SHUT YO BITCH ASS UP...
+     </p>
+
     </div>
   </section>
 </main>
