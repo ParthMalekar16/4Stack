@@ -1,25 +1,30 @@
-import { ShoppingCart } from "lucide-react";
-export default function Navbar(){
-    return (<nav className="w-full px-20 py-3 flex items-center bg-white text-black/80 backdrop-blur-md shadow-sm">
-          <h1 className="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-purple-500">
-            4Stack </h1>
-
-          <div className="flex gap-3 text-sm font-medium mx-auto ml-10">
-            <a href="#">Deals</a>
-            <a href="#">Compare Products</a>
-            <a href="#">Deals Under</a>
-            <a href="#">Shop by Brand</a>
-            <a href="#">Today's Deals</a>
-            <a href="#">Lowest Prices</a>
-            <a href="#">Quick Buy</a>
+export default function Navbar() {
+  return (
+    <nav className="h-16 w-full bg-[#fafafa]/80 backdrop-blur-md border-b border-gray-100/50 sticky top-0 z-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center justify-between">
+        {/* Logo */}
+        <div className="flex items-center gap-2 cursor-pointer">
+          <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center shadow-sm">
+            <span className="text-white font-bold text-xl leading-none">S</span>
           </div>
+          <span className="font-bold text-xl text-gray-900 tracking-tight">Searchly</span>
+        </div>
 
-          <div className="flex gap-4">
-            <ShoppingCart className="w-5 h-5 cursor-pointer hover:text-purple-500 transition mt-1.5" />
-            <button className="px-4 py-2 text-sm hover:text-red-500 transition bg-[#1C0770] text-white rounded-full">
-              Login/Sign Up
-            </button>
-          </div>
-        </nav>
-    );
+        {/* Links */}
+        <div className="hidden sm:flex items-center gap-8">
+          <a href="#" className="text-sm font-medium text-gray-600 hover:text-blue-600 transition-colors">Products</a>
+          <a href="#" className="text-sm font-medium text-gray-600 hover:text-blue-600 transition-colors">Categories</a>
+          <a href="#" className="text-sm font-medium text-gray-600 hover:text-blue-600 transition-colors">Pricing</a>
+        </div>
+
+        {/* Actions */}
+        <div className="flex items-center gap-4">
+          <button className="text-sm font-medium text-gray-600 hover:text-gray-900 hidden sm:block">Log in</button>
+          <button className="text-sm font-medium bg-gray-900 text-white px-5 py-2 rounded-full hover:bg-gray-800 transition-colors shadow-sm">
+            Sign up
+          </button>
+        </div>
+      </div>
+    </nav>
+  );
 }
