@@ -1,12 +1,12 @@
 "use client";
 import React, { useState, useEffect } from 'react';
 import { Search, Mic } from 'lucide-react';
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence } from 'framer-motion';
 
 const PLACEHOLDERS = [
-  "Enter a product link...",
-  "Enter website...",
-  "Search by keywords...",
+  "Apple Iphone...",
+  "Nike Air Max...",
+  "Samsung Galaxy...",
   "Find what you're looking for..."
 ];
 
@@ -33,14 +33,14 @@ export function SearchBar() {
   return (
     <form 
       onSubmit={handleSearch}
-      className={`relative w-full max-w-3xl mx-auto bg-white rounded-full flex items-center p-1.5 sm:p-2 border transition-all duration-300 ${
+      className={`relative w-full max-w-3xl mx-auto bg-[#141414] rounded-full flex items-center p-1.5 sm:p-2 border transition-all duration-300 ${
         isFocused 
           ? 'border-blue-500 shadow-[0_0_0_4px_rgba(59,130,246,0.1)]' 
-          : 'border-gray-200 shadow-md hover:shadow-lg'
+          : 'border-gray-800 shadow-md hover:shadow-lg'
       }`}
     >
       {/* Magnifying Glass Icon (Leftmost) */}
-      <div className="pl-4 sm:pl-5 text-gray-400 shrink-0">
+      <div className="pl-4 sm:pl-5 text-gray-500 shrink-0">
         <Search className="w-5 h-5 sm:w-6 sm:h-6" />
       </div>
 
@@ -52,7 +52,7 @@ export function SearchBar() {
           onChange={(e) => setQuery(e.target.value)}
           onFocus={() => setIsFocused(true)}
           onBlur={() => setIsFocused(false)}
-          className="w-full h-full min-h-[44px] sm:min-h-[52px] bg-transparent text-gray-800 placeholder-transparent outline-none text-base sm:text-lg z-10"
+          className="w-full h-full min-h-[44px] sm:min-h-[52px] bg-transparent text-white placeholder-transparent outline-none text-base sm:text-lg z-10"
         />
         
         {/* Animated Placeholder Layer */}
@@ -65,7 +65,7 @@ export function SearchBar() {
                 animate={{ y: 0, opacity: 1 }}
                 exit={{ y: "-100%", opacity: 0 }}
                 transition={{ type: "spring", stiffness: 300, damping: 30 }}
-                className="text-gray-400 absolute w-full truncate text-base sm:text-lg font-light"
+                className="text-gray-500 absolute w-full truncate text-base sm:text-lg font-light"
               >
                 {PLACEHOLDERS[placeholderIndex]}
               </motion.span>
@@ -79,7 +79,7 @@ export function SearchBar() {
         <button 
           type="button"
           onClick={() => alert("Voice search activated")}
-          className="p-2.5 text-gray-400 hover:text-blue-600 rounded-full hover:bg-blue-50 transition-colors outline-none focus:ring-2 focus:ring-blue-500/50"
+          className="p-2.5 text-gray-400 hover:text-blue-500 rounded-full hover:bg-white/5 transition-colors outline-none focus:ring-2 focus:ring-blue-500/50"
           title="Search by voice"
           aria-label="Search by voice"
         >
